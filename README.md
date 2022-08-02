@@ -1,1 +1,1 @@
-# NextJs-Practice
+Nextjs Events-App
