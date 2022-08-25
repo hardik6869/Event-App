@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <Head>
         <title> Next Event </title>
-        <meta name='description' content="Next Event"
+        <meta name="description" content="Next Event" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Component {...pageProps} />

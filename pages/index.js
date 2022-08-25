@@ -13,7 +13,6 @@ export default function Home() {
           content="find a lot of great events that allow you to evolve.."
         />
       </Head>
-
       <div>
         <EventList items={featuredEvents} />
       </div>

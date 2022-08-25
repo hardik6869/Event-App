@@ -2,6 +2,7 @@ import DateIcon from "../icon/date-icon";
 import classes from "./event-logistics.module.css";
 import LogisticsItem from "./logistics-item";
 import Image from "next/image";
+
 const Eventlogistics = (props) => {
   const { date, address, image, imageAlt } = props;
   const humanReadableDate = new Date(date).toLocaleDateString("en-US", {
@@ -9,7 +10,6 @@ const Eventlogistics = (props) => {
     month: "long",
     year: "numeric",
   });
-
   const addressText = address.replace(", ", "\n");
 
   return (

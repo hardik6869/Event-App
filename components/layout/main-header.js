@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classes from "./main-header.module.css";
 
-const MainHeader = (props) => {
+const MainHeader = () => {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
