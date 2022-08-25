@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 import EventList from "../../components/events/event-list";
@@ -13,6 +14,13 @@ const AllEventsPage = (props) => {
   };
   return (
     <Fragment>
+      <Head>
+        <title>All Events</title>
+        <meta
+          name="description"
+          content="find a lot of great events that allow you to evolve.."
+        />
+      </Head>
       <EventSearch onSearch={findEventHandler} />
       <EventList items={events} />
     </Fragment>
@@ -25,7 +33,7 @@ export const getStaticProps = async () => {
     props: {
       events: events,
     },
-    revalidate: 60,
+    revalidate: 1800,
   };
 };
 

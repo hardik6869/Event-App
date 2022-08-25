@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 import EventList from "../../components/events/event-list";
@@ -10,9 +11,20 @@ const FilteredEventsPage = (props) => {
   const router = useRouter();
   const filterData = router.query.slug;
 
+  const pageHeadData = (
+    <Head>
+      <title>Filtered Event</title>
+      <meta
+        name="description"
+        content={`All Events for ${props.date.numMonth}/${props.date.numYear}`}
+      />
+    </Head>
+  );
+
   if (!filterData) {
     return (
       <ErrorAlert>
+        {pageHeadData}
         <p className="center"> Loading... </p>
       </ErrorAlert>
     );
@@ -21,6 +33,7 @@ const FilteredEventsPage = (props) => {
   if (props.hasError) {
     return (
       <Fragment>
+        {pageHeadData}
         <ErrorAlert>
           <p> Invalid Filter. Please adjust your value!</p>
         </ErrorAlert>
@@ -35,6 +48,7 @@ const FilteredEventsPage = (props) => {
   if (!filteredEvent || filteredEvent === 0) {
     return (
       <Fragment>
+        {pageHeadData}
         <ErrorAlert>
           <p> No Event Found for the chosen filter!</p>
         </ErrorAlert>
@@ -49,6 +63,7 @@ const FilteredEventsPage = (props) => {
 
   return (
     <Fragment>
+      {pageHeadData}
       <ResultTitle date={date} />
       <EventList items={filteredEvent} />
     </Fragment>
