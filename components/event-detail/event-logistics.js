@@ -15,7 +15,7 @@ const Eventlogistics = (props) => {
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>
-        <Image src={`/${image}`} alt={imageAlt} heught={300} width={300} />
+        <Image src={`/${image}`} alt={imageAlt} height={300} width={300} />
       </div>
       <ul className={classes.list}>
         <LogisticsItem icon={DateIcon}>
