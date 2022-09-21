@@ -1,4 +1,5 @@
 import DateIcon from "../icon/date-icon";
+import AddressIcon from "../icon/address-icon";
 import classes from "./event-logistics.module.css";
 import LogisticsItem from "./logistics-item";
 import Image from "next/image";
@@ -21,7 +22,7 @@ const Eventlogistics = (props) => {
         <LogisticsItem icon={DateIcon}>
           <time> {humanReadableDate} </time>
         </LogisticsItem>
-        <LogisticsItem icon={DateIcon}>
+        <LogisticsItem icon={AddressIcon}>
           <address> {addressText} </address>
         </LogisticsItem>
       </ul>
